@@ -10,11 +10,6 @@ const asarPatch = "getUserAccount(){return this.#v.fetch({endpoint:\"/v3/account
 const signature = "E8 ?? ?? ?? ?? 85 C0 75 ?? F6 C3 01 74 ?? 48 89 F9 E8 ?? ?? ?? ??"
 const patchBytes = [0x31]
 const patchOffset = 0x5
-// ...
-// test eax, eax (0x85 for	r/m16/32/64)
-// jnz      short loc_1403A4DD2 (Integrity check failed)
-// call    near ptr funk_1445527E0
-// ...
 
 console.log("WeMod unlocker by K1tbyte")
 let defaultDir = path.join(process.env.LOCALAPPDATA || path.join(process.env.HOME || process.env.USERPROFILE, 'AppData', 'Local'), 'WeMod');
